@@ -69,8 +69,8 @@ public class FindDevicesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_find_devices);
 
         // ensure that Bluetooth exists
-        if (!ensureBLEExists())
-            finish();
+//        if (!ensureBLEExists())
+//            finish();
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         setSupportActionBar(toolbar);
@@ -104,7 +104,7 @@ public class FindDevicesActivity extends AppCompatActivity {
 
         mPermissionRationale = dialogView.findViewById(R.id.permission_rationale); // this is not null only on API23+
 
-        startScan();
+//        startScan();
 
      }
 
@@ -158,7 +158,12 @@ public class FindDevicesActivity extends AppCompatActivity {
                 .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).setReportDelay(1000).setUseHardwareBatchingIfSupported(false).build();
         final List<ScanFilter> filters = new ArrayList<>();
         filters.add(new ScanFilter.Builder().setDeviceName(mDeviceName).build());
-        scanner.startScan(filters, settings, scanCallback);
+        try {
+            scanner.startScan(filters, settings, scanCallback);
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         mIsScanning = true;
         mHandler.postDelayed(new Runnable() {
