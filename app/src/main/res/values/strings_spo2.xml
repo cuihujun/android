@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="spo2_feature_title">SpO2</string>
+
+    <string name="spo2_feature_title_long">Pulse Oximeter Monitor</string>
+    <dimen name="spo2_feature_title_long_margin">-152dp</dimen>
+
+    <string name="spo2_default_name">DEFAULT SpO2</string>
+    <string name="spo2_value_unit">SpO2(%)</string>
+
+    <string name="spo2_about_text">SpO2 (Pulse Oximeter Monitor) profile allows you to connect to your Pulse Oximeter sensor (f.e. a finger).
+        It shows you the current oxigen saturation levels and pulse rate of the sensor and a historic data on the graph.</string>
+</resources>
