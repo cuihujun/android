@@ -7,6 +7,13 @@ It contains applications demonstrating Bluetooth Smart profiles:
 * **Health Thermometer Monitor**, 
 * **Pulse Oximeter Monitor**,
 
+The relevalnt activities for this application are:
+* **HRSActivity.java
+* **HTSActivity.java
+* **SPO2Activity.java
+
+The above activities include the BLE profiles to receive the HRS (Heart-Rate), Respiratory Rate, SpO2 (Pulse Oximeter), and HTS (Health Thermometer) and the code necessary to display these measurements to the graphical interface.
+
 The corresponding hardware that works with this application is an Arduino 101 using the Zephyr RTOS.  This project can be found at https://github.com/zephyrhealthproject/zephyr.
 
 The graph in HRM profile is created using the [AChartEngine v1.1.0](http://www.achartengine.org) contributed based on the [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0).
