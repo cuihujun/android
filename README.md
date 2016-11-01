@@ -7,6 +7,7 @@ It contains applications demonstrating Bluetooth Smart profiles:
 * **Health Thermometer Monitor**, 
 * **Pulse Oximeter Monitor**,
 
+The corresponding hardware that works with this application is an Arduino 101 using the Zephyr RTOS.  This project can be found at https://github.com/zephyrhealthproject/zephyr.
 
 The graph in HRM profile is created using the [AChartEngine v1.1.0](http://www.achartengine.org) contributed based on the [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0).
 
